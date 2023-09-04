@@ -22,6 +22,7 @@ return(
 
         <input type="text" placeholder='write a task' value={task} onChange={(e) => setTaks(e.target.value)} /> {/*input el cual nos permitira crear la tarea y este se vera reflejado por el evento onchange  */}
         <button type='submit'>Add</button>
+      
     </form>
 </div>
 

@@ -2,7 +2,7 @@
 
 import React from "react";
 
-function TaskList({tasks}) {
+function TaskList({tasks,deleteTask}) {
 
   return (
     <>
@@ -10,9 +10,11 @@ function TaskList({tasks}) {
       <h2>Task list</h2>
           <ul>
             {tasks.map((task, index) =>(
-              <li key={index}>{task}</li>
+              <li key={index}>{task}{' '}     <button onClick={()=> deleteTask(index)}>Remove</button></li>
             ))}
-          </ul>
+              
+          </ul>  
+    
      </div>
     </>
   )
