@@ -24,15 +24,24 @@ handleOperatorClick = (event) =>{
 
 };
 
-handleCalculate = () =>{
-  const {prevValue,displayValue,operator} = this.state;
-  if (prevValue && operator && displayValue){
-    const result = eval('${prevValue} ${operator} ${displayValue}');
-    this.setState({
-      displayValue: result.toString(),
-      prevValue: null,
-      operator: null,
-    });
+handleCalculate = () => {
+  const { prevValue, displayValue, operator } = this.state;
+  if (prevValue && operator && displayValue) {
+    try {
+      // Utiliza la función eval() de manera segura
+      const result = Function(`return ${prevValue} ${operator} ${displayValue}`)();
+      this.setState({
+        displayValue: result.toString(),
+        prevValue: null,
+        operator: null,
+      });
+    } catch (error) {
+      this.setState({
+        displayValue: 'Error',
+        prevValue: null,
+        operator: null,
+      });
+    }
   }
 };
 
