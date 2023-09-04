@@ -50,18 +50,21 @@ handleCalculate = () =>{
                 <button onClick={this.handleNumberClick}>9</button>
                 <button onClick={this.handleOperatorClick}>/</button>
               </div>
+          
               <div className="row">
                 <button onClick={this.handleNumberClick}>4</button>
                 <button onClick={this.handleNumberClick}>5</button>
                 <button onClick={this.handleNumberClick}>6</button>
                 <button onClick={this.handleOperatorClick}>*</button>
               </div>
+           
               <div className="row">
                 <button onClick={this.handleNumberClick}>1</button>
                 <button onClick={this.handleNumberClick}>2</button>
                 <button onClick={this.handleNumberClick}>3</button>
                 <button onClick={this.handleOperatorClick}>-</button>
               </div>
+        
               <div className="row">
                 <button onClick={this.handleNumberClick}>0</button>
                 <button onClick={this.handleOperatorClick}>+</button>

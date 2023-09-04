@@ -1,4 +1,5 @@
 .calculator {
+
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
@@ -9,15 +10,12 @@
 }
 
 
-.calculator-buttons {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-}
+
 
 .row {
   display: flex;
   justify-content: space-between;
+
 }
 
 button {
